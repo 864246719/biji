@@ -1,0 +1,15 @@
+一：系统设置proxy 
+  http proxy/socks host:127.0.0.1
+  ignore hosts :llocalhost, 127.0.0.0/8, ::1
+二：1.download  （chrome 插件）Proxy SwitchyOmega  作用：自动切换国内外网
+   2.打开chrome 中 extenxtion 的 extensionOptions 修改
+    设置：
+        1.Sort列表 Condition Type空
+        2.001.Rule list rules 勾选 对应设置为proxy
+          	Default           设置为direct
+          002.http proxy 127.0.0.1  8080
+        3.Rule List Config
+           AutoProxy勾选
+            链接为https://github.com/gfwlist/gfwlist 的第一个
+三： mp4打开方式
+   apt-get 下载  mpv
