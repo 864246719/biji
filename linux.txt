@@ -1,0 +1,45 @@
+sudo apt install maven  
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+
+ps aux | grep -i apt  chakanjincheng 
+sudo kill -9 <process id>  
+sudo apt list --installed查看apt文件
+
+
+
+
+java项目工作环境搭建 
+1.命令窗口输入java javac 没有安装会有提示安装命令
+sudo apt-get install openjdk-11-jdk-headless //java编译器
+sudo apt-get install openjdk-11-jre-headless //java编译器
+
+2maven安装 
+sudo apt intall maven 
+
+
+
+3。vs code 安装
+官网下载ubuntu版本
+其所需插件  java Extension Pack （包含debug ,maven插件）
+
+4.maven项目的创建
+01：vscode内命令启用方式 ctrl +shift +p 来输入
+maven:generate from Maven Archetype
+
+02：稍后vscode Terminal中提示 ，
+输入groupId （目的创建项目目录）
+artfactId (整个项目的名字)
+
+03：为了pom.xml的依赖，来网上来下载依赖jar的包
+文件生成后 vscode内命令启用方式 ctrl +shift +p 来输入
+maven:Execute commands
+
+
+
+
+
+
+
+
