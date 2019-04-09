@@ -1,0 +1,90 @@
+=======================安装：
+1.Download MySQL APT Repository
+https://dev.mysql.com/get/mysql-apt-config_0.8.12-1_all.deb
+2.加载MySQL APT Repository
+shell> sudo dpkg -i mysql-apt-config_w.x.y-z_all.deb
+3.
+shell> sudo apt-get update
+4.
+shell> sudo apt-get install mysql-server
+5.启动服务器
+shell> sudo service mysql start
+6.mysql服务器的相关安全设置
+sudo mysql_secure_installation
+7.ufw设置
+sudo ufw allow mysql
+8.设置重启后自动启动mysql服务器
+systemctl enable mysql
+9.进入mysql shell
+mysql -u root -p
+
+
+======================mySQL基本命令==========
+mysql -u root -p 
+show databases;
+--查看帮助
+help
+--查看主机名
+SELECT @@hostname;
+--创建数据库testdb
+CREATE DATABASE testdb;
+--创建新用户user1，密码为：123
+create user 'user1'@'localhost' identified with mysql_native_password  by '123';
+--授权用户testuser能完全操作testdb数据库
+grant all on testdb.* to 'testuser'@'localhost';
+--修改用户密码
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+--查看所有当前用户能操作的数据库
+show databases;
+--删除数据库
+DROP DATABASE testdb;
+--查看所有用户
+SELECT user, host FROM mysql.user;
+--删除用户
+DROP USER testuser@localhost;
+
+--------------------授权相关
+--查看当前用户授权
+show grants;
+--为用户testuser授权
+GRANT alter,create,delete,drop,index,insert,select,update,trigger,alter routine,
+create routine, execute, create temporary tables on testuser.* to 'testuser'@'localhost';
+--组群授权：可以创建一个组ROLE，再给ROLE授权，然后将用户添加到这个ROLE
+mysql> create ROLE role_name;
+mysql> grant alter,create,delete,drop,index,insert,select,update,trigger,alter
+ routine,create routine, execute, create temporary tables 
+on database_name.* to 'role_name';
+mysql> grant 'role_name' to 'user1'@'localhost';
+mysql> set default role 'role_name' to 'user1';
+
+--为用户授予所有权限
+GRANT ALL PRIVILEGES ON * . * TO 'testuser'@'localhost';
+
+---------------------- Table 相关操作
+--查看table内的设置
+describe tableName
+
+
+
+------------------mysql笔记------------------------
+DBMS mysql是数据库管理系统 （系统这个名词就像个ubuntu计算机系统,可以创建用户）
+1.系统内有多个数据库，每个数据库有多个表 
+查看系统内数据库，命令：show databases
+然后再查看对应数据库，进入数据库命令为：use +databaseName;
+才可以查看想要的表，命令：show tables;
+才可以查看表中的属性，命令:describe +tableName;
+想要看表，就要先进数据库，
+
+
+修改图片
+UPDATE `certain_table`
+SET image = LOAD_FILE('/full/path/to/new/image.jpg')
+WHERE id = 1234;
+
+insert into table(image_loc) values('/images/random/cool.jpg') where id=1;
+
+
+
+
+
+
