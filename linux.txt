@@ -35,10 +35,11 @@ artfactId (整个项目的名字)
 03：为了pom.xml的依赖，来网上来下载依赖jar的包
 文件生成后 vscode内命令启用方式 ctrl +shift +p 来输入
 maven:Execute commands
+fh -hl查看磁盘以用
+ssh root@fuwuqi 登录服务器
+npm run build  优化npm
 
-
-
-
+serve -s build -p 80
 
 
 
