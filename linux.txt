@@ -20,7 +20,7 @@ sudo apt intall maven
 
 
 
-3。vs code 安装
+3.vs code 安装
 官网下载ubuntu版本
 其所需插件  java Extension Pack （包含debug ,maven插件）
 
@@ -41,6 +41,10 @@ npm run build  优化npm
 
 serve -s build -p 80
 
+4解压
+tar -xvzf  tarname
+mv  文件名  文件目的地
+cp 文件名  文件目的地
 
 
 
