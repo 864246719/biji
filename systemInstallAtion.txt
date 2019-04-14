@@ -15,13 +15,13 @@
 三： mp4打开方式
    apt-get 下载  mpv
 
-si :v2ray lianjie
+si :v2ray 连接
   1.setting network 127.0.0.1 8080 1080
-  2.baidu :v2ray bash   minglinghang :
-	qiehuandao sudo su
-  3.peizhilujing config.json 
+  2.百度 :v2ray bash   命令行 :
+	切换到 sudo su
+  3.配置 config.json 
    scp root@167.179.81.174:/etc/v2ray/config.json ./
-     fuwuqi ke huduan neirong butong  lujingxiangtong
+     服务器和客户端 内容不同，路经相同
 
 
 

@@ -1,0 +1,67 @@
+=======================Heroku
+----------------------------------------关于Heroku
+定义：是一家网站托管服务商
+注意事项：
+1.由于Heroku使用Node时，默认使用较低版本，所以在布置程序到Heroku之前需要在package.json中声明当前程序所用Node版本：
+"engines": {
+    "node": "8.11.4",
+    "npm": "5.8.0"
+  },
+2.告诉Heroku如何启动Node Server(package.json):
+"scripts": {
+    "start": "node index.js"
+  },
+----------------------------------------使用Heroku
+--install
+sudo snap install --classic heroku
+
+--login
+heroku login
+
+--create heroku project
+准备工作：准备一个需要托管的已经git init之后的本地项目，进入该项目根目录使用命令：
+heroku create
+会得到两个链接：
+https://boiling-lowlands-16451.herokuapp.com/
+https://git.heroku.com/boiling-lowlands-16451.git
+一个是用于最终访问网站的链接，第二个适用于上传本地repository的目的地。
+
+--upload local repository to remote heroku repository
+git remote add heroku https://git.heroku.com/boiling-lowlands-16451.git
+git push heroku master
+
+--open the final project In the browser
+heroku open
+
+--纠错
+heroku log
+
+
+
+再次修改网站文件
+git add .
+git commit -m '标记，下次可以查看什么时候改的'
+git push heroku master
+
+
+
+
+----------------------------------------------------GitHub
+一：gitHub 上传文件
+echo "# ss" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/864246719/ss.git
+git push -u origin master
+
+再次修改  
+git add README.md
+git commit -m "first commit"
+git push -u origin master
+
+二：github 网站下载到本地:
+git clone https://github.com/864246719/biji.git
+
+
+

@@ -1,2 +1,0 @@
-一：github 网站下载到本地:
-git clone https://github.com/864246719/biji.git
