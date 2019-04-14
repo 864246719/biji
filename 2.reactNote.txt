@@ -1,0 +1,51 @@
+------------------------------------------总结
+1.方法赋值
+const getSeason= (lat,month)=>{                
+    if(month>2&& month<9){
+        return lat>0 ? 'summer':'winter';    
+    }else{
+        return lat >0 ? 'winter':'summer';
+    }
+} 
+const season =getSeason(props.lat,new Date().getMonth());//输入参数调用方法
+
+
+2.选择方法中的值
+const seasonConfig={
+    summer:{
+        text:"let's  hit the beach",
+        iconName:'sun'
+    },
+    winter:{
+        text:'Burr,it is chilly',
+        iconName:'snowflake'
+    }
+};
+
+const {text,iconName}=seasonConfig[summer]; //通过输入参数summer，获取方法值 ，记住返回的值的写法,text和iconName可以在下面的命令中调用
+
+
+3.<link rel="stylesheet" href=""> 可以通过网页添加css
+
+
+4js中添加css样式
+<div className={`season-display ${season}`}>
+
+
+5给初始值赋值state   ||   通过窗口得到的值=> 
+			赋的值在后面this.setState
+state={lat:null,errorMessage:''};
+
+window.navigator.geolocation.getCurrentPosition(
+    position=>this.setState({lat:position.coords.latitude}),
+    err=>this.setState({errorMessage:err.message})
+);
+
+
+
+6default props
+{props.message}  
+
+Spinner.defaultProps={
+    message:'Loading...'
+};
