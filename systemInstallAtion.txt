@@ -11,7 +11,7 @@
           002.http proxy 127.0.0.1  8080
         4.Rule List Config
            AutoProxy勾选
-            链接为https://github.com/gfwlist/gfwlist 的第一个
+            链接允许翻墙的网站为https://github.com/gfwlist/gfwlist 的第一个
 三： mp4打开方式
    apt-get 下载  mpv
 

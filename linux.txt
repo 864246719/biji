@@ -50,3 +50,11 @@ cp 文件名  文件目的地
 5挂载
 什么是挂载：原来的硬件磁盘在插入电脑，在linux是不能用的，需要挂载后才能够操作内存空间
 mount 硬盘位置 放入的位置
+
+6vim
+:wq 或者 ：x   保存退出
+i  修改
+
+7path valiable 不可使用
+$:PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
+
