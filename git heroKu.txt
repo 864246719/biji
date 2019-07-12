@@ -63,5 +63,8 @@ git push -u origin master
 二：github 网站下载到本地:
 git clone https://github.com/864246719/biji.git
 
+三：git创建库
+git remote add origin https://github.com/864246719/tt.git
+git push -u origin master
 
 
