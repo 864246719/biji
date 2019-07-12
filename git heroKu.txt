@@ -48,15 +48,15 @@ git push heroku master
 
 ----------------------------------------------------GitHub
 一：gitHub 上传文件
-echo "# ss" >> README.md
 git init
 git add README.md
+git add .
 git commit -m "first commit"
 git remote add origin https://github.com/864246719/ss.git
 git push -u origin master
 
 再次修改  
-git add README.md
+git add .
 git commit -m "first commit"
 git push -u origin master
 
